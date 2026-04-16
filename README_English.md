@@ -41,41 +41,6 @@ Designed for developers, power users, and anyone who frequently switches between
 
 ---
 
-## Installation
-
-### Homebrew (Recommended)
-
-```bash
-brew install tom-hanks/tap/anyGoShell
-```
-
-### Manual Build
-
-```bash
-# Clone repository
-git clone https://github.com/tom-hanks/anyGoShell.git
-cd anyGoShell
-
-# Build and install
-make install
-```
-
----
-
-## Quick Start
-
-### Step 1: Add to Finder Toolbar
-
-1. Open `/Applications` folder
-2. Hold **⌘ (Command)** key
-3. Drag `anyGoShell.app` to any Finder window's toolbar
-
-### Step 2: Click to Launch
-
-Click the toolbar icon — terminal opens at current directory instantly.
-
----
-
 ## Configuration
 
 ### GUI Settings

@@ -27,3 +27,14 @@
 /* GitHub */
 "github.link" = "GitHub 仓库";
 "github.tooltip" = "查看源代码或在 GitHub 上反馈问题";
+
+/* Finder Toolbar */
+"toolbar.section_title" = "Finder 工具栏";
+"toolbar.add_to_finder" = "添加到 Finder 工具栏";
+"toolbar.remove_from_finder" = "从 Finder 工具栏移除";
+"toolbar.add_title" = "添加到 Finder 工具栏";
+"toolbar.add_message" = "即将打开 Applications 文件夹";
+"toolbar.add_instructions" = "请按住 ⌘ (Command) 键，将 anyGoShell.app 拖动到 Finder 窗口的工具栏上。";
+"toolbar.remove_failed" = "移除失败";
+"toolbar.remove_not_found" = "未找到工具栏项";
+"toolbar.remove_success" = "已从 Finder 工具栏移除，Finder 将自动重启。";

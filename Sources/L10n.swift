@@ -27,4 +27,15 @@ enum L10n {
     // GitHub 相关
     static let githubLink = NSLocalizedString("github.link", bundle: bundle, comment: "")
     static let githubTooltip = NSLocalizedString("github.tooltip", bundle: bundle, comment: "")
+
+    // Finder Toolbar 相关
+    static let toolbarSectionTitle = NSLocalizedString("toolbar.section_title", bundle: bundle, comment: "")
+    static let toolbarAddToFinder = NSLocalizedString("toolbar.add_to_finder", bundle: bundle, comment: "")
+    static let toolbarRemoveFromFinder = NSLocalizedString("toolbar.remove_from_finder", bundle: bundle, comment: "")
+    static let toolbarAddTitle = NSLocalizedString("toolbar.add_title", bundle: bundle, comment: "")
+    static let toolbarAddMessage = NSLocalizedString("toolbar.add_message", bundle: bundle, comment: "")
+    static let toolbarAddInstructions = NSLocalizedString("toolbar.add_instructions", bundle: bundle, comment: "")
+    static let toolbarRemoveFailed = NSLocalizedString("toolbar.remove_failed", bundle: bundle, comment: "")
+    static let toolbarRemoveNotFound = NSLocalizedString("toolbar.remove_not_found", bundle: bundle, comment: "")
+    static let toolbarRemoveSuccess = NSLocalizedString("toolbar.remove_success", bundle: bundle, comment: "")
 }

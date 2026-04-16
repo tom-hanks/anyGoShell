@@ -37,6 +37,7 @@ struct MainView: View {
     @AppStorage("UseCustomTerminal") private var useCustomTerminal = false
     @AppStorage("CustomTerminalName") private var customTerminalName = ""
     @State private var customTerminalValidated: Bool? = nil
+    @State private var isAddedToToolbar: Bool = false
 
     var body: some View {
         ScrollView {
@@ -80,6 +81,49 @@ struct MainView: View {
                         .foregroundColor(.secondary)
                 }
                 .padding(.top, 16)
+
+                Divider()
+                    .padding(.horizontal)
+
+                // Finder Toolbar Section
+                VStack(alignment: .leading, spacing: 10) {
+                    HStack {
+                        Image(systemName: "folder")
+                            .foregroundColor(.orange)
+                        Text(L10n.toolbarSectionTitle)
+                            .font(.headline)
+                        Spacer()
+                    }
+
+                    Button(action: {
+                        if isAddedToToolbar {
+                            _ = FinderToolbarManager.shared.removeFromToolbar()
+                        } else {
+                            _ = FinderToolbarManager.shared.addToToolbar()
+                        }
+                        // 刷新状态
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            isAddedToToolbar = FinderToolbarManager.shared.isAddedToToolbar()
+                        }
+                    }) {
+                        HStack(spacing: 8) {
+                            Image(systemName: isAddedToToolbar ? "minus.circle" : "plus.circle")
+                            Text(isAddedToToolbar ? L10n.toolbarRemoveFromFinder : L10n.toolbarAddToFinder)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 8)
+                        .background(isAddedToToolbar ? Color.red.opacity(0.1) : Color.blue.opacity(0.1))
+                        .cornerRadius(6)
+                    }
+                    .buttonStyle(.plain)
+                    .onAppear {
+                        isAddedToToolbar = FinderToolbarManager.shared.isAddedToToolbar()
+                    }
+                }
+                .padding()
+                .background(Color(NSColor.controlBackgroundColor))
+                .cornerRadius(10)
+                .padding(.horizontal)
 
                 Divider()
                     .padding(.horizontal)

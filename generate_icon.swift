@@ -10,7 +10,7 @@ image.lockFocus()
 
 // 绘制蓝色圆角矩形背景
 let rect = NSRect(origin: .zero, size: size)
-let cornerRadius: CGFloat = 180.0 // 圆角半径
+let cornerRadius: CGFloat = 220.0 // 圆角半径（增大使图标更圆润）
 
 // 创建蓝色渐变（从浅蓝到深蓝）
 let colorSpace = CGColorSpaceCreateDeviceRGB()
