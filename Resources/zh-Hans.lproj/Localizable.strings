@@ -1,0 +1,29 @@
+/* Main view */
+"app.subtitle" = "在 Finder 当前目录快速打开终端";
+"settings.preferred_terminal" = "首选终端";
+"settings.not_installed" = "（未安装）";
+"settings.fallback_note" = "如果选择的终端不可用，将自动使用系统默认终端";
+
+/* Custom Terminal */
+"settings.custom_terminal" = "使用自定义终端";
+"settings.enter_app_name" = "输入应用名称";
+"settings.validate" = "验证";
+"settings.terminal_found" = "已找到";
+"settings.terminal_not_found" = "未找到";
+"settings.custom_terminal_hint" = "输入终端应用名称（如 cmux、Alacritty），macOS 会自动查找并打开";
+
+/* Instructions */
+"instructions.title" = "使用方法";
+"instructions.step1.title" = "将应用拖到 Finder 工具栏";
+"instructions.step1.detail" = "按住 ⌘ 键，将 anyGoShell 图标拖动到 Finder 窗口的工具栏上";
+"instructions.step2.title" = "点击图标快速打开终端";
+"instructions.step2.detail" = "在任意 Finder 窗口点击工具栏上的 anyGoShell 图标，即可在当前目录打开终端";
+"instructions.settings.title" = "修改设置";
+"instructions.settings.detail" = "在 Applications 文件夹中双击应用图标即可打开此设置界面";
+
+/* Tip */
+"tip.open_settings" = "提示：在 Applications 文件夹中双击应用图标即可打开此设置界面";
+
+/* GitHub */
+"github.link" = "GitHub 仓库";
+"github.tooltip" = "查看源代码或在 GitHub 上反馈问题";
