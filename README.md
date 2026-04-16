@@ -9,8 +9,6 @@
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![GitHub](https://img.shields.io/badge/GitHub-tom--hanks/anyGoShell-black?logo=github)](https://github.com/tom-hanks/anyGoShell)
 
-![界面截图](screenshots/settings.jpg)
-
 ---
 
 ## 简介
@@ -18,6 +16,8 @@
 anyGoShell 是 Finder 与终端之间的无缝桥梁。只需点击 Finder 工具栏图标，即可在当前目录立即打开终端会话 —— 无需手动导航。
 
 专为开发者、高级用户以及频繁在文件浏览与命令行操作之间切换的人群设计。
+
+![界面截图](screenshots/settings.jpg)
 
 ## 功能特性
 
@@ -101,45 +101,6 @@ defaults write com.solarhell.anyGoShell UseCustomTerminal -bool true
 defaults write com.solarhell.anyGoShell CustomTerminalName "Alacritty"
 ```
 
----
-
-## 开发
-
-### 构建命令
-
-```bash
-make help       # 列出所有命令
-make build      # 编译并创建 App Bundle
-make install    # 安装到 /Applications
-make clean      # 清除构建产物
-make run        # 启动应用
-make release    # 创建可分发 ZIP 包
-```
-
-### 项目结构
-
-```
-anyGoShell/
-├── Package.swift           # SPM 配置文件
-├── Makefile                # 构建自动化
-├── Sources/
-│   ├── main.swift          # 入口文件
-│   ├── Views.swift         # SwiftUI 界面
-│   ├── TerminalManager.swift
-│   ├── Terminal.swift      # ScriptingBridge 定义
-│   ├── Finder.swift        # ScriptingBridge 定义
-│   ├── FinderManager.swift
-│   └── L10n.swift          # 本地化
-├── Resources/
-│   ├── Info.plist
-│   ├── anyGoShell.entitlements
-│   ├── AppIcon.icns
-│   ├── en.lproj/
-│   └── zh-Hans.lproj/
-└── screenshots/
-```
-
----
 
 ## 系统要求
 

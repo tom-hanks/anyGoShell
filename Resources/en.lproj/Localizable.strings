@@ -27,3 +27,14 @@
 /* GitHub */
 "github.link" = "GitHub Repository";
 "github.tooltip" = "View source code and report issues on GitHub";
+
+/* Finder Toolbar */
+"toolbar.section_title" = "Finder Toolbar";
+"toolbar.add_to_finder" = "Add to Finder Toolbar";
+"toolbar.remove_from_finder" = "Remove from Finder Toolbar";
+"toolbar.add_title" = "Add to Finder Toolbar";
+"toolbar.add_message" = "Opening Applications folder";
+"toolbar.add_instructions" = "Hold ⌘ (Command) key and drag anyGoShell.app to the Finder window toolbar.";
+"toolbar.remove_failed" = "Remove Failed";
+"toolbar.remove_not_found" = "Toolbar item not found";
+"toolbar.remove_success" = "Removed from Finder toolbar. Finder will restart automatically.";
