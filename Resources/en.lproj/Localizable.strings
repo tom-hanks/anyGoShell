@@ -1,0 +1,29 @@
+/* Main view */
+"app.subtitle" = "Open terminal from current Finder directory";
+"settings.preferred_terminal" = "Preferred Terminal";
+"settings.not_installed" = "(Not Installed)";
+"settings.fallback_note" = "If the selected terminal is unavailable, the system default terminal will be used automatically.";
+
+/* Custom Terminal */
+"settings.custom_terminal" = "Use Custom Terminal";
+"settings.enter_app_name" = "Enter app name";
+"settings.validate" = "Validate";
+"settings.terminal_found" = "Found";
+"settings.terminal_not_found" = "Not found";
+"settings.custom_terminal_hint" = "Enter the terminal app name (e.g. cmux, Alacritty). macOS will find and open it.";
+
+/* Instructions */
+"instructions.title" = "How to Use";
+"instructions.step1.title" = "Drag to Finder Toolbar";
+"instructions.step1.detail" = "Hold ⌘ key and drag the anyGoShell icon to any Finder window's toolbar";
+"instructions.step2.title" = "Click to Open Terminal";
+"instructions.step2.detail" = "Click the anyGoShell icon in any Finder window's toolbar to open a terminal in the current directory";
+"instructions.settings.title" = "Change Settings";
+"instructions.settings.detail" = "Double-click the app icon in the Applications folder to open this settings window";
+
+/* Tip */
+"tip.open_settings" = "Tip: Double-click the app icon in the Applications folder to open this settings window";
+
+/* GitHub */
+"github.link" = "GitHub Repository";
+"github.tooltip" = "View source code and report issues on GitHub";
