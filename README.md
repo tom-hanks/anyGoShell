@@ -1,91 +1,91 @@
 # anyGoShell
 
-[中文文档](README_zh.md) | [English](README.md)
+[中文文档](README.md)｜[English](README_English.md)
 
-**A minimalist macOS utility for opening terminal from Finder toolbar.**
+**极简 macOS 工具，从 Finder 工具栏一键打开终端。**
 
 [![macOS](https://img.shields.io/badge/macOS-Sequoia%2015%2B-blue?logo=apple)](https://www.apple.com/macos/)
 [![Swift](https://img.shields.io/badge/Swift-6.2-orange?logo=swift)](https://swift.org)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![GitHub](https://img.shields.io/badge/GitHub-tom--hanks/anyGoShell-black?logo=github)](https://github.com/tom-hanks/anyGoShell)
 
-![Screenshot](screenshots/settings.jpg)
+![界面截图](screenshots/settings.jpg)
 
 ---
 
-## Overview
+## 简介
 
-anyGoShell provides a seamless bridge between Finder and your terminal. With a single click on the Finder toolbar, instantly open a terminal session in the current directory — no manual navigation required.
+anyGoShell 是 Finder 与终端之间的无缝桥梁。只需点击 Finder 工具栏图标，即可在当前目录立即打开终端会话 —— 无需手动导航。
 
-Designed for developers, power users, and anyone who frequently switches between file browsing and command-line operations.
+专为开发者、高级用户以及频繁在文件浏览与命令行操作之间切换的人群设计。
 
-## Features
+## 功能特性
 
-| Feature | Description |
-|---------|-------------|
-| **Toolbar Integration** | Add to Finder toolbar via drag-and-drop (⌘ + drag) |
-| **Smart Detection** | Auto-detects installed terminals, hides unavailable ones |
-| **Native Icons** | Displays actual terminal app icons for visual clarity |
-| **Custom Terminal** | Supports any terminal app via name input |
-| **Fallback Logic** | Automatically uses Terminal.app if preferred option unavailable |
-| **Lightweight** | Pure Swift implementation, minimal resource footprint |
+| 特性 | 说明 |
+|------|------|
+| **工具栏集成** | 通过拖放添加到 Finder 工具栏（⌘ + 拖动） |
+| **智能检测** | 自动检测已安装的终端，隐藏不可用的选项 |
+| **原生图标** | 显示终端应用的实际图标，视觉识别更直观 |
+| **自定义终端** | 支持通过名称输入任意终端应用 |
+| **回退机制** | 首选终端不可用时自动使用 Terminal.app |
+| **轻量高效** | 纯 Swift 实现，资源占用极低 |
 
-### Supported Terminals
+### 支持的终端
 
-- **Terminal.app** — macOS built-in
-- **iTerm2** — Popular third-party terminal
-- **Warp** — Modern AI-powered terminal
-- **Ghostty** — High-performance terminal
-- **WezTerm** — Cross-platform multiplexer
-- **Any Custom Terminal** — Enter app name directly
+- **Terminal.app** — macOS 内置终端
+- **iTerm2** — 广受欢迎的第三方终端
+- **Warp** — 现代 AI 驱动终端
+- **Ghostty** — 高性能终端模拟器
+- **WezTerm** — 跨平台终端复用器
+- **任意自定义终端** — 直接输入应用名称
 
 ---
 
-## Installation
+## 安装
 
-### Homebrew (Recommended)
+### Homebrew（推荐）
 
 ```bash
 brew install tom-hanks/tap/anyGoShell
 ```
 
-### Manual Build
+### 手动构建
 
 ```bash
-# Clone repository
+# 克隆仓库
 git clone https://github.com/tom-hanks/anyGoShell.git
 cd anyGoShell
 
-# Build and install
+# 构建并安装
 make install
 ```
 
 ---
 
-## Quick Start
+## 快速开始
 
-### Step 1: Add to Finder Toolbar
+### 步骤一：添加到 Finder 工具栏
 
-1. Open `/Applications` folder
-2. Hold **⌘ (Command)** key
-3. Drag `anyGoShell.app` to any Finder window's toolbar
+1. 打开 `/Applications` 文件夹
+2. 按住 **⌘ (Command)** 键
+3. 将 `anyGoShell.app` 拖动到任意 Finder 窗口的工具栏
 
-### Step 2: Click to Launch
+### 步骤二：点击启动
 
-Click the toolbar icon — terminal opens at current directory instantly.
+点击工具栏图标 —— 终端即刻在当前目录打开。
 
 ---
 
-## Configuration
+## 配置
 
-### GUI Settings
+### 图形界面设置
 
-Double-click the app icon in `/Applications` to open settings panel.
+双击 `/Applications` 中的应用图标打开设置面板。
 
-### Command Line
+### 命令行配置
 
 ```bash
-# Terminal.app (default)
+# Terminal.app（默认）
 defaults write com.solarhell.anyGoShell PreferredTerminal Terminal
 
 # iTerm2
@@ -96,40 +96,40 @@ defaults write com.solarhell.anyGoShell PreferredTerminal Warp
 defaults write com.solarhell.anyGoShell PreferredTerminal Ghostty
 defaults write com.solarhell.anyGoShell PreferredTerminal WezTerm
 
-# Custom terminal
+# 自定义终端
 defaults write com.solarhell.anyGoShell UseCustomTerminal -bool true
 defaults write com.solarhell.anyGoShell CustomTerminalName "Alacritty"
 ```
 
 ---
 
-## Development
+## 开发
 
-### Build Commands
+### 构建命令
 
 ```bash
-make help       # List all commands
-make build      # Compile and create App Bundle
-make install    # Install to /Applications
-make clean      # Remove build artifacts
-make run        # Launch application
-make release    # Create distributable ZIP
+make help       # 列出所有命令
+make build      # 编译并创建 App Bundle
+make install    # 安装到 /Applications
+make clean      # 清除构建产物
+make run        # 启动应用
+make release    # 创建可分发 ZIP 包
 ```
 
-### Project Structure
+### 项目结构
 
 ```
 anyGoShell/
-├── Package.swift           # SPM manifest
-├── Makefile                # Build automation
+├── Package.swift           # SPM 配置文件
+├── Makefile                # 构建自动化
 ├── Sources/
-│   ├── main.swift          # Entry point
-│   ├── Views.swift         # SwiftUI interface
+│   ├── main.swift          # 入口文件
+│   ├── Views.swift         # SwiftUI 界面
 │   ├── TerminalManager.swift
-│   ├── Terminal.swift      # ScriptingBridge
-│   ├── Finder.swift        # ScriptingBridge
+│   ├── Terminal.swift      # ScriptingBridge 定义
+│   ├── Finder.swift        # ScriptingBridge 定义
 │   ├── FinderManager.swift
-│   └── L10n.swift          # Localization
+│   └── L10n.swift          # 本地化
 ├── Resources/
 │   ├── Info.plist
 │   ├── anyGoShell.entitlements
@@ -141,49 +141,37 @@ anyGoShell/
 
 ---
 
-## Requirements
+## 系统要求
 
 - **macOS Sequoia 15.0+**
-- **Xcode 16+** (for building)
+- **Xcode 16+**（用于构建）
 
 ---
 
-## Technical Details
+## 技术实现
 
-anyGoShell uses Apple Events (AppleScript) to:
+anyGoShell 使用 Apple Events (AppleScript) 实现：
 
-1. Query the frontmost Finder window for its current path
-2. Fall back to Desktop path if no Finder window exists
-3. Invoke the preferred terminal via AppleScript API
-4. Exit automatically after terminal launches
-
----
-
-## Roadmap
-
-- [x] Terminal.app, iTerm2, Warp, Ghostty, WezTerm support
-- [x] Native app icons display
-- [x] Custom terminal support
-- [x] Intelligent fallback mechanism
-- [ ] New tab vs new window preference
-- [ ] Global keyboard shortcut
-- [ ] Post-launch command execution
+1. 查询最前端 Finder 窗口的当前路径
+2. 若无 Finder 窗口则回退至桌面路径
+3. 通过 AppleScript API 调用首选终端
+4. 终端启动后自动退出应用
 
 ---
 
-## Contributing
+## 参与贡献
 
-Contributions are welcome. Please open an issue or submit a pull request on [GitHub](https://github.com/tom-hanks/anyGoShell).
-
----
-
-## License
-
-Released under the [MIT License](LICENSE).
+欢迎提交 Issue 或 Pull Request：[GitHub](https://github.com/tom-hanks/anyGoShell)
 
 ---
 
-## Links
+## 许可证
 
-- **Repository**: [github.com/tom-hanks/anyGoShell](https://github.com/tom-hanks/anyGoShell)
-- **Issues**: [Report a bug](https://github.com/tom-hanks/anyGoShell/issues)
+本项目采用 [MIT License](LICENSE) 开源协议。
+
+---
+
+## 相关链接
+
+- **代码仓库**: [github.com/tom-hanks/anyGoShell](https://github.com/tom-hanks/anyGoShell)
+- **问题反馈**: [提交 Issue](https://github.com/tom-hanks/anyGoShell/issues)
