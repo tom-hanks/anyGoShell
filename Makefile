@@ -1,7 +1,7 @@
 # anyGoShell Makefile
 # 使用 Swift Package Manager 构建 macOS 应用
 
-.PHONY: all build clean install uninstall run run-ui run-settings test help icon reset debug
+.PHONY: all build clean install uninstall run run-ui run-settings test help icon reset debug version release-version
 
 # 变量定义
 APP_NAME = anyGoShell
@@ -29,6 +29,8 @@ help:
 	@echo "  make icon       - 生成应用图标"
 	@echo "  make reset      - 重置 Finder 和扩展"
 	@echo "  make debug      - 显示调试信息"
+	@echo "  make version    - 显示当前版本号"
+	@echo "  make release-version <版本号> - 发布新版本"
 	@echo ""
 
 # 构建应用
@@ -207,3 +209,21 @@ debug:
 	else \
 		echo "❌ 未安装"; \
 	fi
+
+# 显示当前版本号
+version:
+	@echo "📋 版本信息"
+	@echo "============"
+	@echo "本地版本: $(shell grep -A1 'CFBundleShortVersionString' Resources/Info.plist | grep '<string>' | sed 's/<string>\|<\/string>//g')"
+	@echo ""
+	@echo "远程版本:"
+	@curl -s "https://api.github.com/repos/tom-hanks/anyGoShell/releases/latest" | grep '"tag_name"' | sed 's/"tag_name": "//;s/",//' || echo "无法获取"
+
+# 发布新版本（参数: make release-version VERSION=1.0.1）
+release-version:
+	@if [ -z "$(VERSION)" ]; then \
+		echo "❌ 请提供版本号"; \
+		echo "用法: make release-version VERSION=1.0.1"; \
+		exit 1; \
+	fi
+	@./release.sh $(VERSION)
