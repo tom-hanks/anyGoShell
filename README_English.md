@@ -1,11 +1,11 @@
 # anyGoShell
 
-[中文文档](README.md)｜[English](README_English.md)
+[中文文档](README.md) | [English](README_English.md)
 
 **A minimalist macOS utility for opening terminal from Finder toolbar.**
 
 [![macOS](https://img.shields.io/badge/macOS-Sequoia%2015%2B-blue?logo=apple)](https://www.apple.com/macos/)
-[![Swift](https://img.shields.io/badge/Swift-6.2-orange?logo=swift)](https://swift.org)
+[![Swift](https://img.shields.io/badge/Swift-6.0-orange?logo=swift)](https://swift.org)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![GitHub](https://img.shields.io/badge/GitHub-tom--hanks/anyGoShell-black?logo=github)](https://github.com/tom-hanks/anyGoShell)
 
@@ -87,21 +87,19 @@ make release    # Create distributable ZIP
 anyGoShell/
 ├── Package.swift           # SPM manifest
 ├── Makefile                # Build automation
-├── Sources/
+├── Sources/                # Main code
 │   ├── main.swift          # Entry point
 │   ├── Views.swift         # SwiftUI interface
 │   ├── TerminalManager.swift
-│   ├── Terminal.swift      # ScriptingBridge
-│   ├── Finder.swift        # ScriptingBridge
 │   ├── FinderManager.swift
 │   └── L10n.swift          # Localization
-├── Resources/
+├── Resources/              # App resources
 │   ├── Info.plist
-│   ├── anyGoShell.entitlements
 │   ├── AppIcon.icns
-│   ├── en.lproj/
-│   └── zh-Hans.lproj/
-└── screenshots/
+│   ├── en.lproj/           # English localization
+│   └── zh-Hans.lproj/      # Chinese localization
+├── scripts/                # Development scripts
+└── screenshots/            # Documentation images
 ```
 
 ---
@@ -126,13 +124,19 @@ anyGoShell uses Apple Events (AppleScript) to:
 
 ## Contributing
 
-Contributions are welcome. Please open an issue or submit a pull request on [GitHub](https://github.com/tom-hanks/anyGoShell).
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ---
 
 ## License
 
 Released under the [MIT License](LICENSE).
+
+---
+
+## Acknowledgments
+
+Portions of code adapted from [OpenInTerminal](https://github.com/Ji4n1ng/OpenInTerminal) by Ji4n1ng.
 
 ---
 

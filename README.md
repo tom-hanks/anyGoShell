@@ -1,11 +1,11 @@
 # anyGoShell
 
-[中文文档](README.md)｜[English](README_English.md)
+[中文文档](README.md) | [English](README_English.md)
 
 **极简 macOS 工具，从 Finder 工具栏一键打开终端。**
 
 [![macOS](https://img.shields.io/badge/macOS-Sequoia%2015%2B-blue?logo=apple)](https://www.apple.com/macos/)
-[![Swift](https://img.shields.io/badge/Swift-6.2-orange?logo=swift)](https://swift.org)
+[![Swift](https://img.shields.io/badge/Swift-6.0-orange?logo=swift)](https://swift.org)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![GitHub](https://img.shields.io/badge/GitHub-tom--hanks/anyGoShell-black?logo=github)](https://github.com/tom-hanks/anyGoShell)
 
@@ -52,11 +52,8 @@ brew install tom-hanks/tap/anyGoShell
 ### 手动构建
 
 ```bash
-# 克隆仓库
 git clone https://github.com/tom-hanks/anyGoShell.git
 cd anyGoShell
-
-# 构建并安装
 make install
 ```
 
@@ -101,6 +98,7 @@ defaults write com.solarhell.anyGoShell UseCustomTerminal -bool true
 defaults write com.solarhell.anyGoShell CustomTerminalName "Alacritty"
 ```
 
+---
 
 ## 系统要求
 
@@ -124,11 +122,19 @@ anyGoShell 使用 Apple Events (AppleScript) 实现：
 
 欢迎提交 Issue 或 Pull Request：[GitHub](https://github.com/tom-hanks/anyGoShell)
 
+详见 [CONTRIBUTING.md](CONTRIBUTING.md)
+
 ---
 
 ## 许可证
 
 本项目采用 [MIT License](LICENSE) 开源协议。
+
+---
+
+## 致谢
+
+部分代码移植自 [OpenInTerminal](https://github.com/Ji4n1ng/OpenInTerminal)，感谢原作者的贡献。
 
 ---
 
