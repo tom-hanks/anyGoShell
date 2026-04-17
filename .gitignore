@@ -1,4 +1,33 @@
+# Build outputs
 .build/
 build/
 .swiftpm/
-.claude
+
+# IDE
+.idea/
+.vscode/
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+
+# macOS
+.DS_Store
+*.swp
+*~.nib
+
+# Backup files
+*_backup*
+*.bak
+
+# Secrets
+*.env
+.env.*
+credentials*
+
+# Claude Code
+.claude/
+
+# Archives (keep release zip for distribution)
+# *.zip
+*.dmg
+*.tar.gz
